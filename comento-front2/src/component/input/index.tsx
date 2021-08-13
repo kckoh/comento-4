@@ -32,10 +32,6 @@ const Input = () => {
 
   return (
     <div>
-      {/* <select onChange={handleSelect}>
-        <option value="Register">Register</option>
-        <option value="Update">Update</option>
-      </select> */}
       <SelectForms setRequest={setRequest} setSelectedOption={setSelectedOption}></SelectForms>
       {selectedOption === 'Register' ? (
         <PostForms request={request} handleChange={handleChange}></PostForms>

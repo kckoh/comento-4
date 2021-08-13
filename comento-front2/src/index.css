@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  background-color: #e6e6e6;
+}
+
+fieldset {
+  margin-inline: 0;
+  padding-inline: 0;
+  padding-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.ul_header {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.li_header {
+  float: left;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.a_header {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.li_header a:hover {
+  background-color: red;
+}
+
+.container {
+  background-color: white;
+}
+
+.career_area {
+  border-bottom: 2px solid #f3f3f3;
+}
+
+/* career menu section */
+.career_menu {
+  display: flex;
+  justify-content: center;
+}
+
+.career_menu li {
+  margin-right: 5px;
+}
+
+.career_menu a {
+  color: #b2b2b2;
+}
+
+.career_clicked {
+  color: black;
+}

@@ -3,6 +3,7 @@ import axios from 'axios'
 import PostBody from './PostBody'
 import TableHead from './TableHead'
 import { useQuery, QueryClient } from 'react-query'
+import '../../index'
 interface PostResponse {
   id: number
   title: string
@@ -10,34 +11,36 @@ interface PostResponse {
 }
 
 const Posts = () => {
-  const [posts, setPosts] = useState<PostResponse[]>()
-
-  // useEffect(() => {
-  //   async function getPosts() {
-  //     const posts = await axios.get('posts')
-
-  //     setPosts(posts.data)
-  //   }
-  //   getPosts()
-  // }, [])
-
   const queryInfo = useQuery('post', () => {
     // setPosts(posts.data)
     return axios.get('posts').then((res) => res.data)
   })
 
   return (
-    <div>
+    <div className="container">
+      <div>
+        <ul className="career_menu">
+          <li>
+            <a href="">All</a>
+          </li>
+          <li>
+            <a href="">Entry</a>
+          </li>
+          <li>
+            <a href="">Experienced</a>
+          </li>
+          <li>
+            <a href="">Intern</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <form action=""></form>
+      </div>
+
       <table>
         <TableHead />
         <tbody>
-          {/* {posts ? (
-            posts.map((post) => {
-              return <PostBody id={post.id} title={post.title} content={post.content}></PostBody>
-            })
-          ) : (
-            <></>
-          )} */}
           {queryInfo.data?.map((post: PostResponse) => {
             return <PostBody id={post.id} title={post.title} content={post.content}></PostBody>
           })}
